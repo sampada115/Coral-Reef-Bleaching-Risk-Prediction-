@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Model files
+*.pth
+*.pt
+*.h5
+
+# Large embedding/data files
+*.npy
+*.csv
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
