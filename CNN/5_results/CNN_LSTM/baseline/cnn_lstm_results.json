@@ -1,0 +1,8 @@
+{
+  "model": "CNN + LSTM",
+  "accuracy": 0.8308,
+  "f1_weighted": 0.8262,
+  "best_val_acc": 0.8308,
+  "epochs": 30,
+  "seq_len": 7
+}
