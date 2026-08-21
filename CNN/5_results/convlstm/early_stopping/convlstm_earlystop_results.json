@@ -1,0 +1,9 @@
+{
+  "model": "ConvLSTM Early Stopping",
+  "accuracy": 0.7297,
+  "f1_weighted": 0.7085,
+  "best_val_acc": 0.7297,
+  "epochs": 11,
+  "forecast_days": 7,
+  "fix": "early stopping only"
+}

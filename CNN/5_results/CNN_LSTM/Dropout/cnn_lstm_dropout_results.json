@@ -1,0 +1,9 @@
+{
+  "model": "CNN+LSTM Dropout",
+  "accuracy": 0.8375,
+  "f1_weighted": 0.8347,
+  "best_val_acc": 0.8375,
+  "epochs": 30,
+  "forecast_days": 7,
+  "fix": "dropout only"
+}
