@@ -1,0 +1,341 @@
+{'train': 635, 'val': 294, 'test': 408} issue days
+
+== PhysNet + weather forecast, 7-day maximum alert (seed 0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:148: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/dataset.py:102: RuntimeWarning: All-NaN slice encountered
+  out[i] = np.nanmax(self.baa[ids], axis=0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 01  loss 1.7371  val score 0.1119
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 02  loss 1.1417  val score 0.4119
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 03  loss 0.7405  val score 0.6574
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 04  loss 0.5549  val score 0.6743
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 05  loss 0.4771  val score 0.6594
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 06  loss 0.4403  val score 0.6946
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 07  loss 0.4285  val score 0.7340
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 08  loss 0.4096  val score 0.7127
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 09  loss 0.3767  val score 0.7273
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 10  loss 0.3543  val score 0.7526
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 11  loss 0.3400  val score 0.7476
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 12  loss 0.3207  val score 0.7507
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 13  loss 0.3063  val score 0.7709
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 14  loss 0.2926  val score 0.7640
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 15  loss 0.2813  val score 0.7599
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 16  loss 0.2751  val score 0.7717
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 17  loss 0.2776  val score 0.7661
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 18  loss 0.2592  val score 0.7763
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 19  loss 0.2559  val score 0.7832
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 20  loss 0.2458  val score 0.7777
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 21  loss 0.2413  val score 0.7791
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 22  loss 0.2332  val score 0.7771
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 23  loss 0.2277  val score 0.7866
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 24  loss 0.2245  val score 0.7903
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 25  loss 0.2169  val score 0.7818
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 26  loss 0.2126  val score 0.7928
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 27  loss 0.2093  val score 0.7884
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 28  loss 0.2102  val score 0.7831
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 29  loss 0.2071  val score 0.7894
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 30  loss 0.2077  val score 0.7910
+   best validation score 0.7928 (125 min)
+{'train': 635, 'val': 294, 'test': 408} issue days
+
+== PhysNet 7-day maximum alert, trained with forecast error (seed 0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:148: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/dataset.py:102: RuntimeWarning: All-NaN slice encountered
+  out[i] = np.nanmax(self.baa[ids], axis=0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 01  loss 1.7379  val score 0.1119
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 02  loss 1.1427  val score 0.3538
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 03  loss 0.7471  val score 0.6443
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 04  loss 0.5577  val score 0.6547
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 05  loss 0.5083  val score 0.6399
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 06  loss 0.4775  val score 0.6743
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 07  loss 0.4473  val score 0.6868
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 08  loss 0.4342  val score 0.7104
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 09  loss 0.4196  val score 0.7319
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 10  loss 0.3709  val score 0.7206
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 11  loss 0.3731  val score 0.7162
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 12  loss 0.3487  val score 0.7522
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 13  loss 0.3417  val score 0.7401
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 14  loss 0.3268  val score 0.7162
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 15  loss 0.3228  val score 0.7449
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 16  loss 0.3151  val score 0.7583
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 17  loss 0.2995  val score 0.7632
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 18  loss 0.2914  val score 0.7529
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 19  loss 0.2809  val score 0.7489
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 20  loss 0.2742  val score 0.7520
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 21  loss 0.2720  val score 0.7574
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 22  loss 0.2563  val score 0.7506
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 23  loss 0.2505  val score 0.7551
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 24  loss 0.2456  val score 0.7422
+   best validation score 0.7632 (66 min)
+{'train': 635, 'val': 294, 'test': 408} issue days
+
+== PhysNet + weather forecast, 7-day maximum alert (seed 1)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:148: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/dataset.py:102: RuntimeWarning: All-NaN slice encountered
+  out[i] = np.nanmax(self.baa[ids], axis=0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 01  loss 1.7445  val score 0.1329
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 02  loss 1.1164  val score 0.5172
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 03  loss 0.7023  val score 0.6014
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 04  loss 0.5877  val score 0.6729
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 05  loss 0.5082  val score 0.6738
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 06  loss 0.4699  val score 0.7037
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 07  loss 0.4446  val score 0.7297
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 08  loss 0.4028  val score 0.7443
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 09  loss 0.3820  val score 0.7259
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 10  loss 0.3462  val score 0.7577
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 11  loss 0.3343  val score 0.7269
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 12  loss 0.3237  val score 0.7575
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 13  loss 0.3148  val score 0.7692
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 14  loss 0.2982  val score 0.7809
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 15  loss 0.2819  val score 0.7513
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 16  loss 0.2711  val score 0.7661
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 17  loss 0.2713  val score 0.7745
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 18  loss 0.2622  val score 0.7831
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 19  loss 0.2491  val score 0.7692
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 20  loss 0.2428  val score 0.7568
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 21  loss 0.2343  val score 0.7550
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 22  loss 0.2261  val score 0.7788
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 23  loss 0.2190  val score 0.7825
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 24  loss 0.2173  val score 0.7681
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 25  loss 0.2109  val score 0.7789
+   best validation score 0.7831 (173 min)
+{'train': 635, 'val': 294, 'test': 408} issue days
+
+== PhysNet + weather forecast, 7-day maximum alert (seed 2)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:148: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/dataset.py:102: RuntimeWarning: All-NaN slice encountered
+  out[i] = np.nanmax(self.baa[ids], axis=0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 01  loss 1.7275  val score 0.1425
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 02  loss 1.0457  val score 0.5152
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 03  loss 0.6996  val score 0.6164
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 04  loss 0.5593  val score 0.6915
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 05  loss 0.4975  val score 0.7080
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 06  loss 0.4884  val score 0.7028
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 07  loss 0.4250  val score 0.6829
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 08  loss 0.4107  val score 0.7399
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 09  loss 0.3659  val score 0.7432
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 10  loss 0.3496  val score 0.7584
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 11  loss 0.3237  val score 0.7180
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 12  loss 0.3219  val score 0.7551
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 13  loss 0.3023  val score 0.7669
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 14  loss 0.2988  val score 0.7719
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 15  loss 0.2859  val score 0.7595
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 16  loss 0.2750  val score 0.7666
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 17  loss 0.2684  val score 0.7842
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 18  loss 0.2586  val score 0.7417
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 19  loss 0.2506  val score 0.7643
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 20  loss 0.2442  val score 0.7712
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 21  loss 0.2388  val score 0.7629
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 22  loss 0.2328  val score 0.7774
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 23  loss 0.2260  val score 0.7795
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+    epoch 24  loss 0.2211  val score 0.7782
+   best validation score 0.7842 (185 min)

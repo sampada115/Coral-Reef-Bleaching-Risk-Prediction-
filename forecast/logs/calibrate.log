@@ -1,0 +1,69 @@
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/2_model/physnet.py:148: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/2_model/dataset.py:99: RuntimeWarning: All-NaN slice encountered
+  out[i] = np.nanmax(self.baa[ids], axis=0)
+Validation seasons (fit):
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/2_model/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+  24/294 issue days
+  48/294 issue days
+  72/294 issue days
+  96/294 issue days
+  120/294 issue days
+  144/294 issue days
+  168/294 issue days
+  192/294 issue days
+  216/294 issue days
+  240/294 issue days
+  264/294 issue days
+  288/294 issue days
+  294/294 issue days
+  lead  1: T = 0.882  (log-loss 0.2021 vs 0.2048 at T=1)
+  lead  2: T = 0.936  (log-loss 0.2213 vs 0.2220 at T=1)
+  lead  3: T = 0.994  (log-loss 0.2587 vs 0.2588 at T=1)
+  lead  4: T = 1.024  (log-loss 0.2951 vs 0.2951 at T=1)
+  lead  5: T = 1.024  (log-loss 0.3272 vs 0.3272 at T=1)
+  lead  6: T = 1.055  (log-loss 0.3665 vs 0.3668 at T=1)
+  lead  7: T = 1.055  (log-loss 0.4108 vs 0.4114 at T=1)
+  lead  8: T = 1.087  (log-loss 0.4396 vs 0.4414 at T=1)
+  lead  9: T = 1.154  (log-loss 0.4627 vs 0.4663 at T=1)
+  lead 10: T = 1.189  (log-loss 0.4902 vs 0.4958 at T=1)
+  lead 11: T = 1.189  (log-loss 0.5082 vs 0.5153 at T=1)
+  lead 12: T = 1.225  (log-loss 0.5317 vs 0.5405 at T=1)
+  lead 13: T = 1.225  (log-loss 0.5461 vs 0.5547 at T=1)
+  lead 14: T = 1.189  (log-loss 0.5634 vs 0.5705 at T=1)
+Test seasons (check):
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/2_model/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+  24/408 issue days
+  48/408 issue days
+  72/408 issue days
+  96/408 issue days
+  120/408 issue days
+  144/408 issue days
+  168/408 issue days
+  192/408 issue days
+  216/408 issue days
+  240/408 issue days
+  264/408 issue days
+  288/408 issue days
+  312/408 issue days
+  336/408 issue days
+  360/408 issue days
+  384/408 issue days
+  408/408 issue days
+  lead  1: Brier 0.0179 -> 0.0177 (isotonic 0.0183)   ECE 0.0054 -> 0.0030 (isotonic 0.0074)
+  lead  2: Brier 0.0179 -> 0.0179 (isotonic 0.0180)   ECE 0.0041 -> 0.0029 (isotonic 0.0035)
+  lead  3: Brier 0.0215 -> 0.0215 (isotonic 0.0213)   ECE 0.0052 -> 0.0052 (isotonic 0.0009)
+  lead  4: Brier 0.0262 -> 0.0262 (isotonic 0.0260)   ECE 0.0067 -> 0.0067 (isotonic 0.0043)
+  lead  5: Brier 0.0304 -> 0.0303 (isotonic 0.0302)   ECE 0.0070 -> 0.0050 (isotonic 0.0060)
+  lead  6: Brier 0.0357 -> 0.0356 (isotonic 0.0356)   ECE 0.0105 -> 0.0083 (isotonic 0.0088)
+  lead  7: Brier 0.0409 -> 0.0406 (isotonic 0.0405)   ECE 0.0145 -> 0.0124 (isotonic 0.0117)
+  lead  8: Brier 0.0444 -> 0.0440 (isotonic 0.0440)   ECE 0.0161 -> 0.0121 (isotonic 0.0143)
+  lead  9: Brier 0.0469 -> 0.0461 (isotonic 0.0469)   ECE 0.0187 -> 0.0124 (isotonic 0.0198)
+  lead 10: Brier 0.0482 -> 0.0473 (isotonic 0.0491)   ECE 0.0180 -> 0.0101 (isotonic 0.0251)
+  lead 11: Brier 0.0492 -> 0.0484 (isotonic 0.0505)   ECE 0.0182 -> 0.0105 (isotonic 0.0265)
+  lead 12: Brier 0.0501 -> 0.0494 (isotonic 0.0532)   ECE 0.0162 -> 0.0080 (isotonic 0.0307)
+  lead 13: Brier 0.0501 -> 0.0497 (isotonic 0.0542)   ECE 0.0134 -> 0.0063 (isotonic 0.0328)
+  lead 14: Brier 0.0514 -> 0.0511 (isotonic 0.0565)   ECE 0.0131 -> 0.0073 (isotonic 0.0355)
+Saved calibration.json and updated meta.json

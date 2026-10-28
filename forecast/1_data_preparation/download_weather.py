@@ -1,16 +1,18 @@
 """
 download_weather.py
 ===================
-Downloads the weather and climate drivers for 2017-09 .. 2025-12:
+Downloads the weather and climate drivers for --start .. --end (default 2017-09 .. 2025-12):
   * daily wind, cloud cover, shortwave radiation, air temperature (Open-Meteo archive,
     ERA5-based) at 74 points on a 0.75 deg grid around the Marine Park
   * ENSO (Nino 3.4) and MJO (RMM1, RMM2) indices
 
     python forecast/1_data_preparation/download_weather.py      # -> forecast/data/weather.npz
+    python forecast/1_data_preparation/download_weather.py --start 2015-09-01 --end 2026-10-20 --out forecast/data/weather_ext.npz
 
 Resumable (one cache file per batch of points and year) and polite to the free API.
 """
 
+import argparse
 import datetime as dt
 import sys
 import time
@@ -21,12 +23,19 @@ import numpy as np
 FORECAST_DIR = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(FORECAST_DIR / "2_model"), str(FORECAST_DIR.parent)]
 from coralwatch import weather  # noqa: E402
-from paths import WEATHER as OUT, WEATHER_CACHE as CACHE  # noqa: E402
+from paths import WEATHER, WEATHER_CACHE as CACHE  # noqa: E402
 START, END = dt.date(2017, 9, 1), dt.date(2025, 12, 31)
 BATCH = 8
 
 
 def main():
+    global START, END, OUT
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--start", type=dt.date.fromisoformat, default=START)
+    ap.add_argument("--end", type=dt.date.fromisoformat, default=END)
+    ap.add_argument("--out", type=Path, default=WEATHER)
+    args = ap.parse_args()
+    START, END, OUT = args.start, args.end, args.out
     CACHE.mkdir(parents=True, exist_ok=True)
     points = weather.weather_points()
     dates = [START + dt.timedelta(days=i) for i in range((END - START).days + 1)]
@@ -35,7 +44,11 @@ def main():
     jobs = [(b, y) for b in range(0, len(points), BATCH) for y in range(START.year, END.year + 1)]
     print(f"{len(points)} points, {len(jobs)} requests", flush=True)
     for n, (b, year) in enumerate(jobs, 1):
-        f = CACHE / f"b{b:03d}_{year}.npz"
+        # partial years record their first / last day in the file name, so moving START or END
+        # re-fetches them instead of reusing a shorter cached year
+        first, last = max(START, dt.date(year, 1, 1)), min(END, dt.date(year, 12, 31))
+        f = CACHE / (f"b{b:03d}_{year}" + (f"_from{first:%m%d}" if first.month + first.day > 2 else "")
+                     + (f"_to{last:%m%d}" if (last.month, last.day) != (12, 31) else "") + ".npz")
         pts = points[b:b + BATCH]
         if not f.exists():
             s, e = max(START, dt.date(year, 1, 1)), min(END, dt.date(year, 12, 31))

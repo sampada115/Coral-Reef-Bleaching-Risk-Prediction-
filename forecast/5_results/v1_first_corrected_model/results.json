@@ -1,0 +1,397 @@
+{
+  "task": "Bleaching Alert level of every Marine Park cell, 7 days ahead, from the previous 7 days",
+  "grid": "107x106 at 0.1 deg, 1927 park cells",
+  "splits": {
+    "train": "seasons ending 2018-2021, 627 issue days",
+    "val": "seasons ending 2022-2023, 222 issue days",
+    "test": "seasons ending 2024-2026, 408 issue days"
+  },
+  "selected_by": "validation macro_f1",
+  "models": {
+    "Persistence": {
+      "fit_seconds": 0.0,
+      "val": {
+        "accuracy": 0.6648994609555067,
+        "macro_f1": 0.4871162426261632,
+        "alert_precision": 0.3961356466876972,
+        "alert_recall": 0.3829089800274432,
+        "alert_f1": 0.3894100317854097,
+        "change_accuracy": 0.0,
+        "changed_share": 0.3351005390444934,
+        "zone_alert_mae_pp": 6.663416697050078,
+        "per_class_recall": {
+          "No Stress": 0.7700646537133573,
+          "Watch": 0.7139297952746658,
+          "Warning": 0.32394992551086205,
+          "Alert Level 1": 0.3406452226874762,
+          "Alert Level 2": 0.2877394636015326
+        },
+        "n_cells": 427794,
+        "n_days": 222
+      },
+      "test": {
+        "accuracy": 0.655870651322283,
+        "macro_f1": 0.5618364534187965,
+        "alert_precision": 0.55422409332518,
+        "alert_recall": 0.5756424662888411,
+        "alert_f1": 0.5647302705682172,
+        "change_accuracy": 0.0,
+        "changed_share": 0.34412934867771705,
+        "zone_alert_mae_pp": 7.836571321728902,
+        "per_class_recall": {
+          "No Stress": 0.8281096862360753,
+          "Watch": 0.6095555346368393,
+          "Warning": 0.4169608820597032,
+          "Alert Level 1": 0.4721802497943882,
+          "Alert Level 2": 0.49751596877217885
+        },
+        "n_cells": 786216,
+        "n_days": 408
+      }
+    },
+    "Climatology": {
+      "fit_seconds": 1.5,
+      "val": {
+        "accuracy": 0.4860259844691604,
+        "macro_f1": 0.22851775308755778,
+        "alert_precision": 0.0,
+        "alert_recall": 0.0,
+        "alert_f1": 0.0,
+        "change_accuracy": 0.35545572498849004,
+        "changed_share": 0.3351005390444934,
+        "zone_alert_mae_pp": 6.388458791122126,
+        "per_class_recall": {
+          "No Stress": 0.9863584049827364,
+          "Watch": 0.3737317389280127,
+          "Warning": 0.05023013808284971,
+          "Alert Level 1": 0.0,
+          "Alert Level 2": 0.0
+        },
+        "n_cells": 427794,
+        "n_days": 222
+      },
+      "test": {
+        "accuracy": 0.5504619595632753,
+        "macro_f1": 0.2579798317953404,
+        "alert_precision": 0.0,
+        "alert_recall": 0.0,
+        "alert_f1": 0.0,
+        "change_accuracy": 0.3716772619751626,
+        "changed_share": 0.34412934867771705,
+        "zone_alert_mae_pp": 10.798210250328985,
+        "per_class_recall": {
+          "No Stress": 0.9571697748574741,
+          "Watch": 0.4594873632396748,
+          "Warning": 0.048137939123805054,
+          "Alert Level 1": 0.0,
+          "Alert Level 2": 0.0
+        },
+        "n_cells": 786216,
+        "n_days": 408
+      }
+    },
+    "Trend + NOAA rule": {
+      "fit_seconds": 0.0,
+      "val": {
+        "accuracy": 0.5768524102722339,
+        "macro_f1": 0.4996032255446926,
+        "alert_precision": 0.43349814206307774,
+        "alert_recall": 0.5380393352645221,
+        "alert_f1": 0.4801442201397983,
+        "change_accuracy": 0.2039984932405095,
+        "changed_share": 0.3351005390444934,
+        "zone_alert_mae_pp": 6.278026229846045,
+        "per_class_recall": {
+          "No Stress": 0.8435955588653442,
+          "Watch": 0.47529328864971876,
+          "Warning": 0.44926956173704224,
+          "Alert Level 1": 0.5249809668823754,
+          "Alert Level 2": 0.4850574712643678
+        },
+        "n_cells": 427794,
+        "n_days": 222
+      },
+      "test": {
+        "accuracy": 0.6312361997211962,
+        "macro_f1": 0.5921604943870734,
+        "alert_precision": 0.5505733932877708,
+        "alert_recall": 0.63859439124487,
+        "alert_f1": 0.591326279597134,
+        "change_accuracy": 0.22987507392075696,
+        "changed_share": 0.34412934867771705,
+        "zone_alert_mae_pp": 7.413376183774299,
+        "per_class_recall": {
+          "No Stress": 0.8726239940366909,
+          "Watch": 0.44131338497557066,
+          "Warning": 0.555040760072723,
+          "Alert Level 1": 0.6190731212822523,
+          "Alert Level 2": 0.6220892899388286
+        },
+        "n_cells": 786216,
+        "n_days": 408
+      }
+    },
+    "Gradient boosting": {
+      "fit_seconds": 1081.1,
+      "val": {
+        "accuracy": 0.5734044890765181,
+        "macro_f1": 0.4338581645770952,
+        "alert_precision": 0.39563592106407025,
+        "alert_recall": 0.34692788534837626,
+        "alert_f1": 0.3696844157426587,
+        "change_accuracy": 0.39042510149699344,
+        "changed_share": 0.3351005390444934,
+        "zone_alert_mae_pp": 6.39771161015352,
+        "per_class_recall": {
+          "No Stress": 0.9010476609572812,
+          "Watch": 0.4978168503084931,
+          "Warning": 0.2590443154781758,
+          "Alert Level 1": 0.3437381043014846,
+          "Alert Level 2": 0.2417624521072797
+        },
+        "n_cells": 427794,
+        "n_days": 222
+      },
+      "test": {
+        "accuracy": 0.6423298431983068,
+        "macro_f1": 0.5625759535502224,
+        "alert_precision": 0.5677519269872795,
+        "alert_recall": 0.5865863787375415,
+        "alert_f1": 0.5770154992190316,
+        "change_accuracy": 0.4334602306327617,
+        "changed_share": 0.34412934867771705,
+        "zone_alert_mae_pp": 7.353959613312095,
+        "per_class_recall": {
+          "No Stress": 0.9040590533246828,
+          "Watch": 0.5077023050738346,
+          "Warning": 0.34451938302738844,
+          "Alert Level 1": 0.6725704339842778,
+          "Alert Level 2": 0.3821690493088648
+        },
+        "n_cells": 786216,
+        "n_days": 408
+      }
+    },
+    "CNN-ConvLSTM": {
+      "fit_seconds": 1565.9,
+      "val": {
+        "accuracy": 0.6246511171264674,
+        "macro_f1": 0.5400446370672737,
+        "alert_precision": 0.4404297652208516,
+        "alert_recall": 0.6327946333282513,
+        "alert_f1": 0.5193724484209539,
+        "change_accuracy": 0.34716854779078365,
+        "changed_share": 0.3351005390444934,
+        "zone_alert_mae_pp": 6.3342338315978335,
+        "per_class_recall": {
+          "No Stress": 0.8483345745040959,
+          "Watch": 0.5457538682224842,
+          "Warning": 0.48660307295488403,
+          "Alert Level 1": 0.5354491815759421,
+          "Alert Level 2": 0.7130268199233717
+        },
+        "n_cells": 427794,
+        "n_days": 222
+      },
+      "test": {
+        "accuracy": 0.6628521932903935,
+        "macro_f1": 0.59899541005183,
+        "alert_precision": 0.5178999946673303,
+        "alert_recall": 0.7117329489935509,
+        "alert_f1": 0.5995390614550431,
+        "change_accuracy": 0.3835821998817268,
+        "changed_share": 0.34412934867771705,
+        "zone_alert_mae_pp": 8.901373826499137,
+        "per_class_recall": {
+          "No Stress": 0.8749603136258852,
+          "Watch": 0.5044744121925075,
+          "Warning": 0.5473227376693449,
+          "Alert Level 1": 0.774056576707534,
+          "Alert Level 2": 0.484707154685863
+        },
+        "n_cells": 786216,
+        "n_days": 408
+      }
+    }
+  },
+  "selected_model": "CNN-ConvLSTM",
+  "selected_vs_persistence_test": {
+    "accuracy": 0.007,
+    "macro_f1": 0.0372,
+    "alert_f1": 0.0348,
+    "change_accuracy": 0.3836,
+    "zone_alert_mae_pp": 1.0648
+  },
+  "cnn_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.9358801549891725,
+      "val_macro_f1": 0.47296162342907005
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7531027991615794,
+      "val_macro_f1": 0.4763238231353671
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.7297379115932106,
+      "val_macro_f1": 0.48143492494749107
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.6790789274983049,
+      "val_macro_f1": 0.48157235346595895
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.671773054478081,
+      "val_macro_f1": 0.5099127492217435
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.6556788449082078,
+      "val_macro_f1": 0.5218180455122425
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.6606044307279815,
+      "val_macro_f1": 0.4260852248289755
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.6611738419798953,
+      "val_macro_f1": 0.47252810590909966
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.6416343990505408,
+      "val_macro_f1": 0.4647926399446263
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.6285719524540209,
+      "val_macro_f1": 0.4937639195977909
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.6363631236876407,
+      "val_macro_f1": 0.5165444281987942
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.6257598034122533,
+      "val_macro_f1": 0.5020945520761918
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.6252379588533247,
+      "val_macro_f1": 0.5023877100693042
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.606876020226182,
+      "val_macro_f1": 0.5318279308986418
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.6069227216536539,
+      "val_macro_f1": 0.530495148288698
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.5937797594488713,
+      "val_macro_f1": 0.5153304307444966
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.6263631918783964,
+      "val_macro_f1": 0.49854041827604406
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.5910917338001671,
+      "val_macro_f1": 0.5270998842953609
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.5961907355313856,
+      "val_macro_f1": 0.528003011418555
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.5926013063205676,
+      "val_macro_f1": 0.49756329230471297
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.5968212935913122,
+      "val_macro_f1": 0.5396381975899113
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.5871522881958093,
+      "val_macro_f1": 0.5258976727603203
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.5733751651773042,
+      "val_macro_f1": 0.4883740830357768
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.576712999142338,
+      "val_macro_f1": 0.48596621628814535
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.5777643816322802,
+      "val_macro_f1": 0.5190600545477053
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.5737603910421831,
+      "val_macro_f1": 0.5400446370672737
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.5575475805874266,
+      "val_macro_f1": 0.5018146336872639
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.5615030801372285,
+      "val_macro_f1": 0.5388823343281252
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.5598685173897081,
+      "val_macro_f1": 0.5335342231704435
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.5566618992000866,
+      "val_macro_f1": 0.5043915457486545
+    },
+    {
+      "epoch": 31,
+      "train_loss": 0.5513433058296094,
+      "val_macro_f1": 0.5284062885506957
+    },
+    {
+      "epoch": 32,
+      "train_loss": 0.5463487955561855,
+      "val_macro_f1": 0.5281886516201035
+    },
+    {
+      "epoch": 33,
+      "train_loss": 0.5514843255709233,
+      "val_macro_f1": 0.4980743789945081
+    },
+    {
+      "epoch": 34,
+      "train_loss": 0.5436148995227601,
+      "val_macro_f1": 0.5262552009296252
+    }
+  ]
+}

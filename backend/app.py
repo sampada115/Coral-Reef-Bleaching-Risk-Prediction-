@@ -26,7 +26,7 @@ from pathlib import Path
 import numpy as np
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import StreamingResponse
+from fastapi.responses import Response, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
@@ -146,7 +146,10 @@ def valid_date(date):
     if date != "latest":
         if not DATE_RE.match(date):
             raise HTTPException(400, "Date must be YYYY-MM-DD or 'latest'")
-        d = dt.date.fromisoformat(date)
+        try:
+            d = dt.date.fromisoformat(date)
+        except ValueError:
+            raise HTTPException(400, "Not a real date")
         if not dt.date(1985, 4, 1) <= d <= dt.date.today():
             raise HTTPException(400, "Date must be between 1985-04-01 and today")
     return date
@@ -178,9 +181,18 @@ def health():
     }
 
 
+_grid_json = {}           # (date, source) -> encoded JSON, so big map grids are serialised once
+
+
 @app.get("/api/grid/{date}")
 def grid(date: str):
-    return get_grid(valid_date(date))
+    g = get_grid(valid_date(date))
+    key = (g["date"], g.get("source"))
+    if key not in _grid_json:
+        if len(_grid_json) > 64:
+            _grid_json.clear()
+        _grid_json[key] = json.dumps(g, separators=(",", ":")).encode()
+    return Response(_grid_json[key], media_type="application/json")
 
 
 @app.get("/api/forecast")

@@ -73,8 +73,17 @@ def skill():
     out = {"model": sel, "target": r.get("target"), "test_seasons": r["test_seasons"],
            "model_test_7d": pick(sel, 7), "persistence_test_7d": pick("Persistence", 7),
            "hybrid_accuracy_by_lead": {k: round(v["test"]["accuracy"][0], 3) for k, v in hyb.items()}}
+    ecmwf = RESULTS_FINAL.parent / "v2_robustness" / "real_forecasts_14d.json"
     real = folder / "real_forecast_check.json"
-    if real.exists():
+    if max7 and ecmwf.exists():      # archived ECMWF runs, every lead (evaluate_extended.py)
+        em = json.loads(ecmwf.read_text())["metrics"]
+        hyb_name = next(n for n in em if n.startswith("Hybrid"))
+        out["with_real_weather_forecasts_7d"] = {
+            "model_accuracy": round(em[hyb_name]["7"]["accuracy"][0], 3),
+            "persistence_accuracy": round(em["Persistence"]["7"]["accuracy"][0], 3),
+            "period": "Dec-Apr of the 2025 and 2026 seasons, archived ECMWF forecasts"}
+        out["with_real_weather_forecasts_by_lead"] = {k: round(v["accuracy"][0], 3) for k, v in em[hyb_name].items()}
+    elif real.exists():
         rr = json.loads(real.read_text())["results"]
         out["with_real_weather_forecasts_7d"] = {
             "model_accuracy": round(rr["Forecast-weather model + real archived forecasts"]["accuracy"][0], 3),
@@ -178,6 +187,12 @@ def forecast(issue=None):
     phys = physics_levels(cube, t, max7)
     if probs is not None:
         probs /= len(members)                                        # [LEADS, 5, H, W]
+        # Temperature scaling per lead (forecast/4_evaluation/calibrate.py): honest probabilities,
+        # same most-likely level.
+        for k, T in enumerate(m.get("calibration_T") or []):
+            logp = np.log(np.clip(probs[k], 1e-6, 1)) / T
+            e = np.exp(logp - logp.max(0, keepdims=True))
+            probs[k] = e / e.sum(0, keepdims=True)
         levels = probs.argmax(1).astype(float)
         p_alert = probs[:, 3] + probs[:, 4]
         # Hybrid: for the short leads chosen on validation, physics persistence beats the network.

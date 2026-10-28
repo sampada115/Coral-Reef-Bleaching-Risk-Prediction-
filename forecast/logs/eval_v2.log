@@ -1,0 +1,34 @@
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:148: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+  evaluated 24/408 forecast days
+  evaluated 48/408 forecast days
+  evaluated 72/408 forecast days
+  evaluated 96/408 forecast days
+  evaluated 120/408 forecast days
+  evaluated 144/408 forecast days
+  evaluated 168/408 forecast days
+  evaluated 192/408 forecast days
+  evaluated 216/408 forecast days
+  evaluated 240/408 forecast days
+  evaluated 264/408 forecast days
+  evaluated 288/408 forecast days
+  evaluated 312/408 forecast days
+  evaluated 336/408 forecast days
+  evaluated 360/408 forecast days
+  evaluated 384/408 forecast days
+  evaluated 408/408 forecast days
+lead  1: Persistence 0.871  Trend + NOAA rule 0.872  Physics persistenc 0.875  PhysNet (ocean onl 0.793  PhysNet + observed 0.695  PhysNet + weather  0.802  Same inputs, no DH 0.781  PhysNet + weather  0.808  PhysNet + weather  0.828
+lead  2: Persistence 0.816  Trend + NOAA rule 0.815  Physics persistenc 0.825  PhysNet (ocean onl 0.768  PhysNet + observed 0.682  PhysNet + weather  0.791  Same inputs, no DH 0.769  PhysNet + weather  0.789  PhysNet + weather  0.810
+lead  3: Persistence 0.770  Trend + NOAA rule 0.764  Physics persistenc 0.783  PhysNet (ocean onl 0.742  PhysNet + observed 0.677  PhysNet + weather  0.783  Same inputs, no DH 0.760  PhysNet + weather  0.772  PhysNet + weather  0.797
+lead  4: Persistence 0.733  Trend + NOAA rule 0.724  Physics persistenc 0.750  PhysNet (ocean onl 0.725  PhysNet + observed 0.673  PhysNet + weather  0.782  Same inputs, no DH 0.761  PhysNet + weather  0.765  PhysNet + weather  0.789
+lead  5: Persistence 0.704  Trend + NOAA rule 0.687  Physics persistenc 0.724  PhysNet (ocean onl 0.714  PhysNet + observed 0.668  PhysNet + weather  0.781  Same inputs, no DH 0.770  PhysNet + weather  0.761  PhysNet + weather  0.787
+lead  6: Persistence 0.679  Trend + NOAA rule 0.658  Physics persistenc 0.702  PhysNet (ocean onl 0.704  PhysNet + observed 0.658  PhysNet + weather  0.778  Same inputs, no DH 0.768  PhysNet + weather  0.754  PhysNet + weather  0.785
+lead  7: Persistence 0.656  Trend + NOAA rule 0.631  Physics persistenc 0.681  PhysNet (ocean onl 0.693  PhysNet + observed 0.655  PhysNet + weather  0.774  Same inputs, no DH 0.761  PhysNet + weather  0.746  PhysNet + weather  0.779
+lead  8: Persistence 0.630  Trend + NOAA rule 0.605  Physics persistenc 0.657  PhysNet (ocean onl 0.681  PhysNet + observed 0.645  PhysNet + weather  0.755  Same inputs, no DH 0.749  PhysNet + weather  0.725  PhysNet + weather  0.762
+lead  9: Persistence 0.605  Trend + NOAA rule 0.584  Physics persistenc 0.635  PhysNet (ocean onl 0.658  PhysNet + observed 0.639  PhysNet + weather  0.739  Same inputs, no DH 0.733  PhysNet + weather  0.705  PhysNet + weather  0.746
+lead 10: Persistence 0.584  Trend + NOAA rule 0.564  Physics persistenc 0.616  PhysNet (ocean onl 0.645  PhysNet + observed 0.631  PhysNet + weather  0.734  Same inputs, no DH 0.728  PhysNet + weather  0.694  PhysNet + weather  0.740
+lead 11: Persistence 0.565  Trend + NOAA rule 0.546  Physics persistenc 0.598  PhysNet (ocean onl 0.632  PhysNet + observed 0.624  PhysNet + weather  0.731  Same inputs, no DH 0.727  PhysNet + weather  0.687  PhysNet + weather  0.739
+lead 12: Persistence 0.547  Trend + NOAA rule 0.530  Physics persistenc 0.581  PhysNet (ocean onl 0.615  PhysNet + observed 0.623  PhysNet + weather  0.734  Same inputs, no DH 0.726  PhysNet + weather  0.676  PhysNet + weather  0.742
+lead 13: Persistence 0.531  Trend + NOAA rule 0.511  Physics persistenc 0.566  PhysNet (ocean onl 0.605  PhysNet + observed 0.617  PhysNet + weather  0.738  Same inputs, no DH 0.727  PhysNet + weather  0.670  PhysNet + weather  0.745
+lead 14: Persistence 0.513  Trend + NOAA rule 0.493  Physics persistenc 0.550  PhysNet (ocean onl 0.599  PhysNet + observed 0.615  PhysNet + weather  0.739  Same inputs, no DH 0.721  PhysNet + weather  0.665  PhysNet + weather  0.742
+Saved /Users/anushka/Documents/COLLEGE/Capstone/forecast/results/v2

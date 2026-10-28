@@ -1,0 +1,18 @@
+74 points, 90 requests
+  10/90
+  20/90
+  30/90
+  40/90
+  50/90
+  60/90
+  batch 56 2020: HTTP Error 429: Too Many Requests - retrying in 60s
+  batch 56 2020: HTTP Error 429: Too Many Requests - retrying in 120s
+  batch 56 2020: HTTP Error 429: Too Many Requests - retrying in 180s
+  batch 56 2020: HTTP Error 429: Too Many Requests - retrying in 240s
+  batch 56 2020: HTTP Error 429: Too Many Requests - retrying in 300s
+  70/90
+  batch 64 2019: HTTP Error 429: Too Many Requests - retrying in 60s
+  80/90
+  90/90
+Climate indices ...
+Saved /Users/anushka/Documents/COLLEGE/Capstone/forecast/data/weather.npz: 3044 days, 74 points, 0.0% missing

@@ -176,3 +176,33 @@ def fetch_previous_runs(points, start, end, leads=range(1, 8), timeout=180):
                     vals[d, p, v] = np.nansum(sel) * 3600 / 1e6 if name == "shortwave_radiation" else np.nanmean(sel)
         out[j] = (dates, vals)
     return out
+
+
+SINGLE_RUNS = "https://single-runs-api.open-meteo.com/v1/forecast"
+
+
+def fetch_single_run(points, run_day, model="ecmwf_ifs", days=15, timeout=300):
+    """One archived forecast run (initialised 00 UTC on run_day = 10:00 in Brisbane), daily values for the
+    following days -> (dates, values[T, P, 4]). Daily wind mean, cloud mean, radiation sum (MJ/m2), air temp mean,
+    over Brisbane calendar days; only complete days are returned (run_day + 1 onwards)."""
+    params = {"latitude": ",".join(str(p[0]) for p in points), "longitude": ",".join(str(p[1]) for p in points),
+              "hourly": ",".join(HOURLY_VARS), "models": model, "run": f"{run_day.isoformat()}T00:00",
+              "forecast_days": days + 1, "timezone": "Australia/Brisbane"}
+    data = json.loads(_get(SINGLE_RUNS + "?" + urllib.parse.urlencode(params), timeout))
+    if isinstance(data, dict):
+        if data.get("error"):
+            raise RuntimeError(data.get("reason"))
+        data = [data]
+    times = data[0]["hourly"]["time"]
+    day_of = np.array([t[:10] for t in times])
+    dates = [run_day + dt.timedelta(days=j) for j in range(1, days + 1)]
+    vals = np.full((len(dates), len(points), 4), np.nan, np.float32)
+    for p, loc in enumerate(data):
+        for v, name in enumerate(HOURLY_VARS):
+            h = np.array([np.nan if x is None else x for x in loc["hourly"][name]], float)
+            for d, day in enumerate(dates):
+                sel = h[day_of == day.isoformat()]
+                if len(sel) < 24 or np.isnan(sel).any():
+                    continue                       # incomplete day
+                vals[d, p, v] = sel.sum() * 3600 / 1e6 if name == "shortwave_radiation" else sel.mean()
+    return dates, vals

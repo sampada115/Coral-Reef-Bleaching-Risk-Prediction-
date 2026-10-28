@@ -1,0 +1,11 @@
+  forecasts for 2023-12-20..2024-05-08 ready
+  forecasts for 2024-12-20..2025-05-08 ready
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/eval_real_forecasts.py:92: RuntimeWarning: Mean of empty slice
+  wk1 = np.nanmean(np.stack(rows), 0)                              # [P, 4]
+233 forecast days with archived weather forecasts
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:148: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+Persistence                                          acc 0.574  macro-F1 0.537  alert-F1 0.565
+Observed weather only (seed 0)                       acc 0.579  macro-F1 0.539  alert-F1 0.639
+Forecast-weather model + observed future weather     acc 0.755  macro-F1 0.726  alert-F1 0.717
+Forecast-weather model + real archived forecasts     acc 0.709  macro-F1 0.684  alert-F1 0.709

@@ -1,0 +1,134 @@
+{
+ "surveys_used": 1396,
+ "by_source": {
+  "aims-aerial-2017": 71,
+  "hughes-aerial-2016": 741,
+  "hughes-aerial-2017": 584
+ },
+ "category_counts": {
+  "0": 80,
+  "1": 275,
+  "2": 285,
+  "3": 277,
+  "4": 479
+ },
+ "note": "AUC: 0.5 = no better than chance, 1 = perfect ranking of bleached above unbleached reefs. Bootstrap 95% CIs over surveyed reefs.",
+ "auc_severe_bleaching_(>30%)": {
+  "NOAA observed alert on survey day": [
+   0.726,
+   0.701,
+   0.75
+  ],
+  "NOAA observed DHW on survey day": [
+   0.79,
+   0.766,
+   0.815
+  ],
+  "Our forecast 7 days before: chance of Alert": [
+   0.722,
+   0.695,
+   0.748
+  ],
+  "Our forecast 7 days before: level": [
+   0.706,
+   0.68,
+   0.732
+  ],
+  "Our forecast 14 days before: chance of Alert": [
+   0.677,
+   0.649,
+   0.707
+  ],
+  "Our forecast 14 days before: level": [
+   0.632,
+   0.605,
+   0.659
+  ],
+  "Same as today, 7 days before": [
+   0.72,
+   0.694,
+   0.744
+  ],
+  "Same as today, 14 days before": [
+   0.756,
+   0.732,
+   0.781
+  ],
+  "Physics persistence, 14 days before": [
+   0.707,
+   0.68,
+   0.731
+  ]
+ },
+ "auc_moderate_or_worse_(>10%)": {
+  "NOAA observed alert on survey day": [
+   0.717,
+   0.688,
+   0.744
+  ],
+  "NOAA observed DHW on survey day": [
+   0.769,
+   0.741,
+   0.797
+  ],
+  "Our forecast 7 days before: chance of Alert": [
+   0.713,
+   0.68,
+   0.746
+  ],
+  "Our forecast 7 days before: level": [
+   0.693,
+   0.667,
+   0.723
+  ],
+  "Our forecast 14 days before: chance of Alert": [
+   0.661,
+   0.628,
+   0.695
+  ],
+  "Our forecast 14 days before: level": [
+   0.607,
+   0.575,
+   0.635
+  ],
+  "Same as today, 7 days before": [
+   0.695,
+   0.668,
+   0.721
+  ],
+  "Same as today, 14 days before": [
+   0.723,
+   0.694,
+   0.748
+  ],
+  "Physics persistence, 14 days before": [
+   0.674,
+   0.646,
+   0.702
+  ]
+ },
+ "share_severe_by_forecast_level_14d": {
+  "share_severe, reefs": {
+   "0": [
+    0.211,
+    90
+   ],
+   "1": [
+    0.515,
+    443
+   ],
+   "2": [
+    0.308,
+    107
+   ],
+   "3": [
+    0.54,
+    467
+   ],
+   "4": [
+    0.775,
+    289
+   ]
+  }
+ }
+}

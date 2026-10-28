@@ -1,0 +1,42 @@
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/2_model/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+/Users/anushka/Documents/COLLEGE/Capstone/backend/forecasting/forecast_v2.py:113: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nanmax(np.stack(parts), axis=0)
+2026-10-23 11:05:50,547 INFO httpx: HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2026-10-23 11:06:07,790 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2020-03-08 N briefing: numbers 2/2, cited 4/4, grounded=True (llm)
+2026-10-23 11:06:39,517 INFO httpx: HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2026-10-23 11:07:02,035 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2020-03-08 C briefing: numbers 9/9, cited 4/4, grounded=True (llm)
+2026-10-23 11:07:45,842 INFO httpx: HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2026-10-23 11:08:05,876 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2022-03-12 N briefing: numbers 2/2, cited 3/3, grounded=True (llm)
+2026-10-23 11:08:33,267 INFO httpx: HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2026-10-23 11:08:50,259 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2022-03-12 C briefing: numbers 2/2, cited 3/3, grounded=True (llm)
+2026-10-23 11:09:24,057 INFO httpx: HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2026-10-23 11:09:36,595 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-03-03 N briefing: numbers 9/9, cited 6/6, grounded=True (llm)
+2026-10-23 11:10:08,231 INFO httpx: HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2026-10-23 11:10:20,157 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2024-03-03 C briefing: numbers 10/10, cited 6/6, grounded=True (llm)
+2026-10-23 11:12:10,243 WARNING coralwatch: No forecast for facts: <urlopen error [Errno 60] Operation timed out>
+2026-10-23 11:12:10,395 INFO httpx: HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2026-10-23 11:12:20,971 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 N briefing: numbers 11/11, cited 6/6, grounded=True (llm)
+2026-10-23 11:14:09,347 WARNING coralwatch: No forecast for facts: <urlopen error [Errno 60] Operation timed out>
+2026-10-23 11:14:09,460 INFO httpx: HTTP Request: GET http://127.0.0.1:11434/api/tags "HTTP/1.1 200 OK"
+2026-10-23 11:14:23,893 INFO httpx: HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 C briefing: numbers 2/2, cited 5/5, grounded=True (llm)
+
+{
+ "briefings": 8,
+ "mode": [
+  "llm"
+ ],
+ "number_accuracy": 1.0,
+ "citation_coverage": 1.0,
+ "fully_grounded_share": 1.0,
+ "unverified_numbers": []
+}
+Saved /Users/anushka/Documents/COLLEGE/Capstone/backend/data/grounding_eval.json

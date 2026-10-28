@@ -1,0 +1,16 @@
+{
+ "model": "max7_s0",
+ "days": 2891,
+ "first": "2018-01-01",
+ "last": "2025-12-31",
+ "dims": 256,
+ "blocks": {
+  "emb_0-63": "park mean",
+  "emb_64-127": "park max",
+  "emb_128-191": "Northern GBR mean",
+  "emb_192-255": "Central GBR mean"
+ },
+ "park_cells": 1927,
+ "northern_cells": 883,
+ "central_cells": 1044
+}

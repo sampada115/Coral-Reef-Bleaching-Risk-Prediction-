@@ -7,12 +7,16 @@ Two ERDDAP servers serve the same 5 km v3.1 product on the same grid:
 
 import datetime as dt
 import io
+import json
+import logging
 import time
 import urllib.parse
 import urllib.request
 from pathlib import Path
 
 import numpy as np
+
+log = logging.getLogger("coralwatch.noaa")
 
 NORTH, SOUTH, WEST, EAST = -10.4, -21.0, 142.3, 152.9
 MODEL_STRIDE = 2  # 0.05 deg pixels -> 0.1 deg grid
@@ -178,17 +182,40 @@ def fetch_days_cached(start, end, cache_dir, variables=("ssta", "hotspot", "dhw"
     tag = "-".join(variables)
     days = [start + dt.timedelta(days=i) for i in range((end - start).days + 1)]
     path = lambda d: cache_dir / f"{tag}_{d.isoformat()}.npz"
-    missing = [d for d in days if not path(d).exists()]
+    # Days NOAA has no data for are remembered, so they aren't re-requested on every call.
+    gaps_file = cache_dir / f"{tag}_gaps.json"
+    gaps = set(json.loads(gaps_file.read_text())) if gaps_file.exists() else set()
+    missing = [d for d in days if not path(d).exists() and d.isoformat() not in gaps]
+    # After a failed download, don't retry for an hour when the last day is already cached,
+    # so each forecast doesn't wait for NOAA's timeout again.
+    down_file = cache_dir / "_download_failed_at"
+    if missing and path(end).exists() and down_file.exists() and time.time() - down_file.stat().st_mtime < 3600:
+        missing = []
     grid = None
     while missing:
         s0 = missing[0]
         run = [d for d in missing if (d - s0).days < chunk and d in days]
         e0 = run[-1]
-        got_dates, lats, lons, x = _pacioos_model_days(s0, e0, timeout=180, variables=variables)
+        try:
+            got_dates, lats, lons, x = _pacioos_model_days(s0, e0, timeout=180, variables=variables)
+        except Exception as e:
+            # NOAA unreachable: carry on with the cached days if the last day is there
+            # (the model treats the few missing days as gaps).
+            if path(end).exists():
+                down_file.touch()
+                log.warning("NOAA download failed (%s); using %d cached of %d days", e,
+                            sum(path(d).exists() for d in days), len(days))
+                break
+            raise
         grid = (lats, lons)
         for d, arr in zip(got_dates, x):
             np.savez_compressed(path(d), x=arr.astype(np.float16), lats=lats, lons=lons)
+        got = set(got_dates)
+        # Only record gaps for days old enough that NOAA won't publish them later
+        gaps |= {d.isoformat() for d in run if d not in got and (dt.date.today() - d).days > 7}
         missing = [d for d in missing if d > e0]      # days NOAA doesn't have are simply skipped
+    if gaps:
+        gaps_file.write_text(json.dumps(sorted(gaps)))
     dates, arrays = [], []
     for d in days:
         if path(d).exists():

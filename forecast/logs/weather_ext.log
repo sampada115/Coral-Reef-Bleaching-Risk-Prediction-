@@ -1,0 +1,17 @@
+74 points, 120 requests
+  10/120
+  20/120
+  30/120
+  batch 24 2017: HTTP Error 429: Too Many Requests - retrying in 60s
+  40/120
+  50/120
+  60/120
+  70/120
+  80/120
+  90/120
+  batch 64 2016: HTTP Error 429: Too Many Requests - retrying in 60s
+  100/120
+  110/120
+  120/120
+Climate indices ...
+Saved forecast/data/weather_ext.npz: 4068 days, 74 points, 0.0% missing

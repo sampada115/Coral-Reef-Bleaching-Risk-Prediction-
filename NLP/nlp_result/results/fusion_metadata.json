@@ -1,0 +1,142 @@
+{
+  "created": "2026-06-29T13:59:37.302148",
+  "total_rows": 2642,
+  "total_features": 1280,
+  "cnn_dim": 256,
+  "bge_dim": 1024,
+  "bge_model": "BAAI/bge-large-en-v1.5",
+  "date_range": [
+    "2018-01-01",
+    "2025-12-31"
+  ],
+  "report_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "interpolated_years": [
+    2025
+  ],
+  "label_distribution": {
+    "0": 703,
+    "1": 677,
+    "2": 279,
+    "3": 268,
+    "4": 715
+  },
+  "split_distribution": {
+    "train": 1915,
+    "test": 727
+  },
+  "pdfs_processed": [
+    {
+      "pdf": "Marine Monitoring Program Annual Report Water Quality Monitoring 2022-23.pdf",
+      "source": "MMP",
+      "year": 2022,
+      "words": 90346,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "MMP Water Quality Report 2023-24.pdf",
+      "source": "MMP",
+      "year": 2023,
+      "words": 93679,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "MMP WQ AIMS JCU report 2019_2020_FINAL.pdf",
+      "source": "MMP",
+      "year": 2019,
+      "words": 74793,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "FINAL_Synthesis Report 2024-25_v2.pdf",
+      "source": "MMP",
+      "year": 2024,
+      "words": 16584,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "Marine Monitoring Program Annual Report2021-22 Inshore Water Quality monitoring.pdf",
+      "source": "MMP",
+      "year": 2021,
+      "words": 90024,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "Marine-Monitoring-Program-Annual-Report-Inshore-Water-Quality-Monitoring-2020-21.pdf",
+      "source": "MMP",
+      "year": 2020,
+      "words": 126205,
+      "method": "ocr"
+    },
+    {
+      "pdf": "MMP-Ann-Report-Water-Quality-2018-19.pdf",
+      "source": "MMP",
+      "year": 2018,
+      "words": 87061,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "reef-health-updates.pdf",
+      "source": "Reef",
+      "year": null,
+      "words": 7380,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "past-reef-health-updates.pdf",
+      "source": "Reef",
+      "year": null,
+      "words": 66156,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "AIMS Long Term Monitoring Program Annual Summary Report on Coral Reef Condition (GBR) 2020-2021_July2021.pdf",
+      "source": "AIMS",
+      "year": 2020,
+      "words": 4984,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "AIMS_LTMP_Report_on GBR_coral_status_2021_2022_040822F3.pdf",
+      "source": "AIMS",
+      "year": 2021,
+      "words": 4636,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "AIMS_LTMP_AnnualSummaryReport_2019-20_Aug21_2020(2).pdf",
+      "source": "AIMS",
+      "year": 2019,
+      "words": 3862,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "AIMS_LTMP_Report_GBR_coral_status_2022_2023_9August2023.pdf",
+      "source": "AIMS",
+      "year": 2022,
+      "words": 4941,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "AIMS_LTMP_Report_GBR_coral_status_2024_2025_final_web.pdf",
+      "source": "AIMS",
+      "year": 2024,
+      "words": 7192,
+      "method": "text_layer"
+    },
+    {
+      "pdf": "AIMS_LTMP_Report_GBR_coral_status_2023_2024_final.pdf",
+      "source": "AIMS",
+      "year": 2023,
+      "words": 6229,
+      "method": "text_layer"
+    }
+  ]
+}

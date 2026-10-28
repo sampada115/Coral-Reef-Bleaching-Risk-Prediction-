@@ -1,0 +1,178 @@
+{'train': 635, 'val': 294, 'test': 408} issue days
+== ocean seed 0: already trained
+
+== PhysNet + observed weather & climate indices (seed 0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:145: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+    epoch 01  loss 1.7199  val score 0.1676
+    epoch 02  loss 1.0011  val score 0.3079
+    epoch 03  loss 0.8227  val score 0.4849
+    epoch 04  loss 0.7228  val score 0.5160
+    epoch 05  loss 0.6695  val score 0.4557
+    epoch 06  loss 0.6316  val score 0.5236
+    epoch 07  loss 0.6286  val score 0.5174
+    epoch 08  loss 0.5973  val score 0.5808
+    epoch 09  loss 0.5808  val score 0.5649
+    epoch 10  loss 0.5510  val score 0.5455
+    epoch 11  loss 0.5537  val score 0.5484
+    epoch 12  loss 0.5269  val score 0.5391
+    epoch 13  loss 0.5064  val score 0.5352
+    epoch 14  loss 0.4916  val score 0.5598
+    epoch 15  loss 0.4749  val score 0.5522
+   best validation score 0.5808 (25 min)
+
+== PhysNet + weather forecast (seed 0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:145: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+    epoch 01  loss 1.7332  val score 0.1720
+    epoch 02  loss 1.0096  val score 0.1676
+    epoch 03  loss 0.7696  val score 0.5375
+    epoch 04  loss 0.6073  val score 0.6095
+    epoch 05  loss 0.5552  val score 0.5250
+    epoch 06  loss 0.5191  val score 0.6266
+    epoch 07  loss 0.4906  val score 0.6270
+    epoch 08  loss 0.4692  val score 0.6928
+    epoch 09  loss 0.4356  val score 0.6839
+    epoch 10  loss 0.4197  val score 0.6855
+    epoch 11  loss 0.3998  val score 0.6782
+    epoch 12  loss 0.3837  val score 0.6837
+    epoch 13  loss 0.3722  val score 0.6804
+    epoch 14  loss 0.3662  val score 0.6961
+    epoch 15  loss 0.3590  val score 0.6966
+    epoch 16  loss 0.3472  val score 0.7031
+    epoch 17  loss 0.3456  val score 0.7107
+    epoch 18  loss 0.3335  val score 0.6950
+    epoch 19  loss 0.3267  val score 0.6978
+    epoch 20  loss 0.3187  val score 0.7207
+    epoch 21  loss 0.3160  val score 0.6866
+    epoch 22  loss 0.3087  val score 0.6973
+    epoch 23  loss 0.3037  val score 0.6902
+    epoch 24  loss 0.3014  val score 0.7051
+    epoch 25  loss 0.2961  val score 0.6975
+    epoch 26  loss 0.2937  val score 0.7127
+    epoch 27  loss 0.2908  val score 0.6924
+   best validation score 0.7207 (38 min)
+
+== Same inputs, no DHW formula layer (seed 0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:145: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+    epoch 01  loss 1.6099  val score 0.1793
+    epoch 02  loss 0.8802  val score 0.5193
+    epoch 03  loss 0.6912  val score 0.5482
+    epoch 04  loss 0.5858  val score 0.5771
+    epoch 05  loss 0.5469  val score 0.6187
+    epoch 06  loss 0.4997  val score 0.6416
+    epoch 07  loss 0.4954  val score 0.6472
+    epoch 08  loss 0.4795  val score 0.6528
+    epoch 09  loss 0.4523  val score 0.6558
+    epoch 10  loss 0.4314  val score 0.6488
+    epoch 11  loss 0.4157  val score 0.6846
+    epoch 12  loss 0.4066  val score 0.6497
+    epoch 13  loss 0.3970  val score 0.6867
+    epoch 14  loss 0.3816  val score 0.6853
+    epoch 15  loss 0.3781  val score 0.6922
+    epoch 16  loss 0.3647  val score 0.7073
+    epoch 17  loss 0.3601  val score 0.6928
+    epoch 18  loss 0.3515  val score 0.6702
+    epoch 19  loss 0.3473  val score 0.6844
+    epoch 20  loss 0.3383  val score 0.6937
+    epoch 21  loss 0.3387  val score 0.7004
+    epoch 22  loss 0.3268  val score 0.6999
+    epoch 23  loss 0.3242  val score 0.6886
+   best validation score 0.7073 (36 min)
+
+Best on validation: full (0.7207) - training 2 more seeds
+
+== PhysNet + weather forecast (seed 1)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:145: RuntimeWarning: Mean of empty slice
+  with np.errstate(all="ignore"):
+    epoch 01  loss 1.6964  val score 0.1676
+    epoch 02  loss 0.9954  val score 0.4722
+    epoch 03  loss 0.7533  val score 0.5312
+    epoch 04  loss 0.6117  val score 0.5962
+    epoch 05  loss 0.5384  val score 0.5749
+    epoch 06  loss 0.5145  val score 0.6654
+    epoch 07  loss 0.4802  val score 0.6271
+    epoch 08  loss 0.4714  val score 0.6720
+    epoch 09  loss 0.4471  val score 0.6605
+    epoch 10  loss 0.4220  val score 0.6570
+    epoch 11  loss 0.4015  val score 0.6819
+    epoch 12  loss 0.3919  val score 0.6823
+    epoch 13  loss 0.3805  val score 0.6800
+    epoch 14  loss 0.3654  val score 0.6918
+    epoch 15  loss 0.3503  val score 0.6527
+    epoch 16  loss 0.3504  val score 0.6688
+    epoch 17  loss 0.3423  val score 0.6992
+    epoch 18  loss 0.3368  val score 0.6604
+    epoch 19  loss 0.3316  val score 0.7015
+    epoch 20  loss 0.3228  val score 0.7027
+    epoch 21  loss 0.3175  val score 0.6827
+    epoch 22  loss 0.3103  val score 0.7275
+    epoch 23  loss 0.3043  val score 0.7180
+    epoch 24  loss 0.3004  val score 0.7066
+    epoch 25  loss 0.2980  val score 0.7165
+    epoch 26  loss 0.2933  val score 0.6981
+    epoch 27  loss 0.2917  val score 0.7066
+    epoch 28  loss 0.2903  val score 0.6879
+    epoch 29  loss 0.2902  val score 0.7028
+   best validation score 0.7275 (38 min)
+
+== PhysNet + weather forecast (seed 2)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:145: RuntimeWarning: Mean of empty slice
+  with np.errstate(all="ignore"):
+    epoch 01  loss 1.6428  val score 0.4019
+    epoch 02  loss 0.9600  val score 0.1676
+    epoch 03  loss 0.7291  val score 0.5865
+    epoch 04  loss 0.6021  val score 0.5981
+    epoch 05  loss 0.5303  val score 0.6298
+    epoch 06  loss 0.4932  val score 0.6465
+    epoch 07  loss 0.4748  val score 0.6291
+    epoch 08  loss 0.4490  val score 0.6802
+    epoch 09  loss 0.4371  val score 0.6503
+    epoch 10  loss 0.4158  val score 0.6572
+    epoch 11  loss 0.3948  val score 0.6828
+    epoch 12  loss 0.3882  val score 0.6783
+    epoch 13  loss 0.3715  val score 0.7051
+    epoch 14  loss 0.3643  val score 0.6753
+    epoch 15  loss 0.3594  val score 0.6941
+    epoch 16  loss 0.3499  val score 0.6999
+    epoch 17  loss 0.3427  val score 0.6986
+    epoch 18  loss 0.3367  val score 0.7109
+    epoch 19  loss 0.3265  val score 0.7110
+    epoch 20  loss 0.3238  val score 0.6785
+    epoch 21  loss 0.3152  val score 0.7021
+    epoch 22  loss 0.3125  val score 0.7053
+    epoch 23  loss 0.3067  val score 0.6986
+    epoch 24  loss 0.3025  val score 0.7106
+    epoch 25  loss 0.2994  val score 0.6956
+    epoch 26  loss 0.2953  val score 0.7040
+   best validation score 0.7110 (163 min)
+{'train': 635, 'val': 294, 'test': 408} issue days
+
+== PhysNet + weather forecast without air temperature (seed 0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:146: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+    epoch 01  loss 1.7342  val score 0.1708
+    epoch 02  loss 1.0155  val score 0.1676
+    epoch 03  loss 0.7880  val score 0.4972
+    epoch 04  loss 0.6349  val score 0.5820
+    epoch 05  loss 0.5808  val score 0.4935
+    epoch 06  loss 0.5414  val score 0.5927
+    epoch 07  loss 0.5100  val score 0.6181
+    epoch 08  loss 0.4937  val score 0.6404
+    epoch 09  loss 0.4628  val score 0.6263
+    epoch 10  loss 0.4390  val score 0.6584
+    epoch 11  loss 0.4202  val score 0.6562
+    epoch 12  loss 0.4016  val score 0.6045
+    epoch 13  loss 0.3949  val score 0.6175
+    epoch 14  loss 0.3811  val score 0.6202
+    epoch 15  loss 0.3734  val score 0.6082
+    epoch 16  loss 0.3661  val score 0.6595
+    epoch 17  loss 0.3521  val score 0.6464
+    epoch 18  loss 0.3437  val score 0.6311
+    epoch 19  loss 0.3399  val score 0.6152
+    epoch 20  loss 0.3249  val score 0.6469
+    epoch 21  loss 0.3220  val score 0.6408
+    epoch 22  loss 0.3144  val score 0.6452
+    epoch 23  loss 0.3088  val score 0.6356
+   best validation score 0.6595 (105 min)

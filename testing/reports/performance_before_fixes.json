@@ -1,0 +1,68 @@
+{
+ "startup_s": 1.5,
+ "health": {
+  "n": 100,
+  "median_ms": 0.6,
+  "p95_ms": 0.7,
+  "max_ms": 0.8
+ },
+ "grid_snapshot": {
+  "n": 50,
+  "median_ms": 178.1,
+  "p95_ms": 178.8,
+  "max_ms": 179.2
+ },
+ "forecast_cold": {
+  "ms": 83702.6,
+  "weather_used": "reanalysis",
+  "model": "PhysNet 7-day maximum alert (ensemble of 3)"
+ },
+ "forecast_warm": {
+  "n": 20,
+  "median_ms": 263.8,
+  "p95_ms": 265.7,
+  "max_ms": 268.1
+ },
+ "explain_offline": {
+  "n": 10,
+  "median_ms": 37.7,
+  "p95_ms": 38.9,
+  "max_ms": 52.5
+ },
+ "load_10_users": {
+  "n": 40,
+  "median_ms": 1792.6,
+  "p95_ms": 2093.0,
+  "max_ms": 2112.4,
+  "requests": 40,
+  "throughput_rps": 5.4,
+  "errors": 0
+ },
+ "load_25_users": {
+  "n": 100,
+  "median_ms": 4397.6,
+  "p95_ms": 4584.0,
+  "max_ms": 4618.0,
+  "requests": 100,
+  "throughput_rps": 5.7,
+  "errors": 0
+ },
+ "load_50_users": {
+  "n": 200,
+  "median_ms": 8914.0,
+  "p95_ms": 9241.5,
+  "max_ms": 9377.9,
+  "requests": 200,
+  "throughput_rps": 5.6,
+  "errors": 0
+ },
+ "memory_mb": {
+  "idle": 149.0,
+  "after_tests": 44.0
+ },
+ "machine": {
+  "cpu_cores": 8,
+  "ram_gb": 8.0,
+  "python": "3.14.4"
+ }
+}

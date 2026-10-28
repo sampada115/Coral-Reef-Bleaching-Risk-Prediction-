@@ -1,0 +1,30 @@
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:148: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+  validation 24/294
+  validation 48/294
+  validation 72/294
+  validation 96/294
+  validation 120/294
+  validation 144/294
+  validation 168/294
+  validation 192/294
+  validation 216/294
+  validation 240/294
+  validation 264/294
+  validation 288/294
+  validation 294/294
+lead  1: val physics 0.850 vs ensemble 0.781 -> physics  | test acc 0.875 (persistence 0.871)
+lead  2: val physics 0.782 vs ensemble 0.760 -> physics  | test acc 0.825 (persistence 0.816)
+lead  3: val physics 0.726 vs ensemble 0.746 -> ensemble | test acc 0.797 (persistence 0.770)
+lead  4: val physics 0.687 vs ensemble 0.740 -> ensemble | test acc 0.789 (persistence 0.733)
+lead  5: val physics 0.649 vs ensemble 0.740 -> ensemble | test acc 0.787 (persistence 0.704)
+lead  6: val physics 0.622 vs ensemble 0.737 -> ensemble | test acc 0.785 (persistence 0.679)
+lead  7: val physics 0.601 vs ensemble 0.728 -> ensemble | test acc 0.779 (persistence 0.656)
+lead  8: val physics 0.582 vs ensemble 0.714 -> ensemble | test acc 0.762 (persistence 0.630)
+lead  9: val physics 0.560 vs ensemble 0.699 -> ensemble | test acc 0.746 (persistence 0.605)
+lead 10: val physics 0.539 vs ensemble 0.694 -> ensemble | test acc 0.740 (persistence 0.584)
+lead 11: val physics 0.523 vs ensemble 0.690 -> ensemble | test acc 0.739 (persistence 0.565)
+lead 12: val physics 0.507 vs ensemble 0.690 -> ensemble | test acc 0.742 (persistence 0.547)
+lead 13: val physics 0.491 vs ensemble 0.689 -> ensemble | test acc 0.745 (persistence 0.531)
+lead 14: val physics 0.480 vs ensemble 0.685 -> ensemble | test acc 0.742 (persistence 0.513)
+Saved hybrid choice and updated meta_daily.json

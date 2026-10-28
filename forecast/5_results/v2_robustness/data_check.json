@@ -1,0 +1,52 @@
+{
+ "days_compared": 2886,
+ "png_scales": {
+  "ssta": [
+   -3.0,
+   3.0
+  ],
+  "hotspot": [
+   0.0,
+   6.0
+  ],
+  "dhw": [
+   0.0,
+   12.0
+  ],
+  "sst": [
+   24.0,
+   32.0
+  ]
+ },
+ "decoding_mean_abs_error": {
+  "ssta": 0.0087,
+  "hotspot": 0.0031,
+  "dhw": 0.0071,
+  "sst": 0.0118
+ },
+ "decoding_p99_abs_error": {
+  "ssta": 0.0339,
+  "hotspot": 0.032,
+  "dhw": 0.0622,
+  "sst": 0.0444
+ },
+ "alert_level_agreement": 0.9936,
+ "alert_level_agreement_worst_day": 0.9497,
+ "share_beyond_png_scale_all_days": {
+  "ssta": 0.0002,
+  "hotspot": 0.7024,
+  "dhw": 0.0025,
+  "sst": 0.0888
+ },
+ "share_beyond_png_scale_scored_days": {
+  "ssta": 0.0001,
+  "hotspot": 0.4054,
+  "dhw": 0.005,
+  "sst": 0.0
+ },
+ "raw_days": 4065,
+ "raw_range": [
+  "2015-09-01",
+  "2026-10-26"
+ ]
+}

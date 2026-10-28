@@ -288,8 +288,13 @@ def offline_briefing(facts, sources):
             s = f["skill"]
             mt = s.get("model_test_7d") or s.get("model_test")
             pt = s.get("persistence_test_7d") or s.get("persistence_test")
-            lines.append(f"On unseen test seasons its 7-day accuracy was {mt['accuracy'] * 100:.1f}% "
-                         f"vs {pt['accuracy'] * 100:.1f}% for assuming no change. [Data]")
+            real = s.get("with_real_weather_forecasts_7d")
+            if real:
+                lines.append(f"With the real weather forecasts of the time ({real['period']}), its 7-day accuracy was "
+                             f"{real['model_accuracy'] * 100:.1f}% vs {real['persistence_accuracy'] * 100:.1f}% for assuming no change. [Data]")
+            else:
+                lines.append(f"On unseen test seasons, given the weather that actually happened, its 7-day accuracy was "
+                             f"{mt['accuracy'] * 100:.1f}% vs {pt['accuracy'] * 100:.1f}% for assuming no change. [Data]")
     else:
         lines.append("No forecast is available for this date.")
     lines.append("\n### What the reports tell us")
