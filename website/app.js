@@ -335,9 +335,34 @@ function drawOverlay() {
   else overlay = L.imageOverlay(cv.toDataURL(), bounds, { className: "data-overlay", interactive: false }).addTo(map);
 }
 
+// Bleaching heat stress only builds up in the austral summer; May-Oct is "No Stress" by definition.
+function isOffSeason(iso) {
+  const m = Number(iso.slice(5, 7));
+  return m >= 5 && m <= 10;
+}
+
+function drawSeasonNote() {
+  const note = $("season-note");
+  const f = state.layer === "forecast" ? state.forecasts[state.date] : null;
+  const day = f ? forecastTarget(f) : state.date;
+  const parts = [];
+  if (day && isOffSeason(day)) {
+    parts.push(`<b>Off-season.</b> ${fmtDate(day)} is outside the reef's summer bleaching season (May–October), when the sea ` +
+      `stays below its summer bleaching threshold, so reefs show No Stress. Heat stress usually builds from December to April. ` +
+      `Pick a summer date (e.g. Mar 2024) to see alerts, or the Temperature anomaly layer to spot unusually warm water.`);
+  }
+  if (f && f.weather === "reanalysis") {
+    parts.push(`<b>Past date:</b> this forecast uses the weather that actually happened afterwards, not the forecast ` +
+      `available at the time, so it is a best case.`);
+  }
+  note.innerHTML = parts.join("<br>");
+  note.hidden = !parts.length;
+}
+
 function drawLegend() {
   const el = $("map-legend");
   $("layer-desc").textContent = LAYERS[state.layer].desc;
+  drawSeasonNote();
   if (state.layer === "forecast") {
     const f = state.forecasts[state.date];
     const leads = f && f.by_lead_levels ? [1, 3, 7, 14] : [];
@@ -473,7 +498,7 @@ function toGrid(table) {
 }
 
 async function loadDate(date) {
-  if (state.grids[date]) { state.live = false; return show(date); }
+  if (state.grids[date]) { state.live = state.grids[date].source === "live"; return show(date); }
   $("map-loading").hidden = false;
   $("date-msg").textContent = "Fetching from NOAA… this takes about 10 seconds.";
   try {
@@ -487,6 +512,7 @@ async function loadDate(date) {
       if (!res.ok) throw new Error(`NOAA replied ${res.status}`);
       grid = toGrid((await res.json()).table);
     }
+    grid.source = grid.source || "live";
     state.grids[grid.date] = grid;
     state.live = true;
     $("date-msg").textContent = "Loaded live from NOAA Coral Reef Watch.";

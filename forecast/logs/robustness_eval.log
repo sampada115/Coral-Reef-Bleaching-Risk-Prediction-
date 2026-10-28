@@ -1,0 +1,167 @@
+== data
+{
+ "days_compared": 2886,
+ "png_scales": {
+  "ssta": [
+   -3.0,
+   3.0
+  ],
+  "hotspot": [
+   0.0,
+   6.0
+  ],
+  "dhw": [
+   0.0,
+   12.0
+  ],
+  "sst": [
+   24.0,
+   32.0
+  ]
+ },
+ "decoding_mean_abs_error": {
+  "ssta": 0.0087,
+  "hotspot": 0.0031,
+  "dhw": 0.0071,
+  "sst": 0.0118
+ },
+ "decoding_p99_abs_error": {
+  "ssta": 0.0339,
+  "hotspot": 0.032,
+  "dhw": 0.0622,
+  "sst": 0.0444
+ },
+ "alert_level_agreement": 0.9936,
+ "alert_level_agreement_worst_day": 0.9497,
+ "share_beyond_png_scale_all_days": {
+  "ssta": 0.0002,
+  "hotspot": 0.7024,
+  "dhw": 0.0025,
+  "sst": 0.0888
+ },
+ "share_beyond_png_scale_scored_days": {
+  "ssta": 0.0001,
+  "hotspot": 0.4054,
+  "dhw": 0.005,
+  "sst": 0.0
+ },
+ "raw_days": 4065,
+ "raw_range": [
+  "2015-09-01",
+  "2026-10-26"
+ ]
+}
+== raw
+Decoded data (as in the published results), seasons 2024-2025
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/2_model/physnet.py:158: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/2_model/physnet.py:185: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/2_model/dataset.py:99: RuntimeWarning: All-NaN slice encountered
+  out[i] = np.nanmax(self.baa[ids], axis=0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/4_evaluation/evaluate_v2.py:116: RuntimeWarning: All-NaN slice encountered
+  return np.nanmax(np.stack(parts), axis=0)
+  decoded: 16/375 issue days
+  decoded: 32/375 issue days
+  decoded: 48/375 issue days
+  decoded: 64/375 issue days
+  decoded: 80/375 issue days
+  decoded: 96/375 issue days
+  decoded: 112/375 issue days
+  decoded: 128/375 issue days
+  decoded: 144/375 issue days
+  decoded: 160/375 issue days
+  decoded: 176/375 issue days
+  decoded: 192/375 issue days
+  decoded: 208/375 issue days
+  decoded: 224/375 issue days
+  decoded: 240/375 issue days
+  decoded: 256/375 issue days
+  decoded: 272/375 issue days
+  decoded: 288/375 issue days
+  decoded: 304/375 issue days
+  decoded: 320/375 issue days
+  decoded: 336/375 issue days
+  decoded: 352/375 issue days
+  decoded: 368/375 issue days
+  decoded: 375/375 issue days
+Raw NOAA data, seasons 2024-2026
+  raw: 16/571 issue days
+  raw: 32/571 issue days
+  raw: 48/571 issue days
+  raw: 64/571 issue days
+  raw: 80/571 issue days
+  raw: 96/571 issue days
+  raw: 112/571 issue days
+  raw: 128/571 issue days
+  raw: 144/571 issue days
+  raw: 160/571 issue days
+  raw: 176/571 issue days
+  raw: 192/571 issue days
+  raw: 208/571 issue days
+  raw: 224/571 issue days
+  raw: 240/571 issue days
+  raw: 256/571 issue days
+  raw: 272/571 issue days
+  raw: 288/571 issue days
+  raw: 304/571 issue days
+  raw: 320/571 issue days
+  raw: 336/571 issue days
+  raw: 352/571 issue days
+  raw: 368/571 issue days
+  raw: 384/571 issue days
+  raw: 400/571 issue days
+  raw: 416/571 issue days
+  raw: 432/571 issue days
+  raw: 448/571 issue days
+  raw: 464/571 issue days
+  raw: 480/571 issue days
+  raw: 496/571 issue days
+  raw: 512/571 issue days
+  raw: 528/571 issue days
+  raw: 544/571 issue days
+  raw: 560/571 issue days
+  raw: 571/571 issue days
+  raw, unclipped: 16/571 issue days
+  raw, unclipped: 32/571 issue days
+  raw, unclipped: 48/571 issue days
+  raw, unclipped: 64/571 issue days
+  raw, unclipped: 80/571 issue days
+  raw, unclipped: 96/571 issue days
+  raw, unclipped: 112/571 issue days
+  raw, unclipped: 128/571 issue days
+  raw, unclipped: 144/571 issue days
+  raw, unclipped: 160/571 issue days
+  raw, unclipped: 176/571 issue days
+  raw, unclipped: 192/571 issue days
+  raw, unclipped: 208/571 issue days
+  raw, unclipped: 224/571 issue days
+  raw, unclipped: 240/571 issue days
+  raw, unclipped: 256/571 issue days
+  raw, unclipped: 272/571 issue days
+  raw, unclipped: 288/571 issue days
+  raw, unclipped: 304/571 issue days
+  raw, unclipped: 320/571 issue days
+  raw, unclipped: 336/571 issue days
+  raw, unclipped: 352/571 issue days
+  raw, unclipped: 368/571 issue days
+  raw, unclipped: 384/571 issue days
+  raw, unclipped: 400/571 issue days
+  raw, unclipped: 416/571 issue days
+  raw, unclipped: 432/571 issue days
+  raw, unclipped: 448/571 issue days
+  raw, unclipped: 464/571 issue days
+  raw, unclipped: 480/571 issue days
+  raw, unclipped: 496/571 issue days
+  raw, unclipped: 512/571 issue days
+  raw, unclipped: 528/571 issue days
+  raw, unclipped: 544/571 issue days
+  raw, unclipped: 560/571 issue days
+  raw, unclipped: 571/571 issue days
+== ecmwf
+== outlook
+  outlook: 16/77 issues
+  outlook: 32/77 issues
+  outlook: 48/77 issues
+  outlook: 64/77 issues
+  outlook: 77/77 issues

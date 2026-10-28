@@ -113,6 +113,14 @@ class Drivers:
 
 # ── Sample construction ───────────────────────────────────────────────
 OCEAN_SCALE = np.array([2.0, 2.0, 8.0, 2.0], np.float32)
+# The training data were decoded from PNG maps drawn with fixed colour scales, so every value lies in
+# these ranges (SST anomaly, HotSpot, DHW, SST). Raw NOAA values (live, cube_raw.npz) go beyond them -
+# HotSpot is negative whenever the sea is below its summer maximum, winter SST drops below 24 degC -
+# so inputs are clipped to the same ranges: the network sees what it was trained on. A no-op for the
+# decoded training data; the alert levels (targets) don't change (HotSpot <= 0 and DHW > 12 give the
+# same level either way).
+INPUT_RANGE = np.array([[-3.0, 0.0, 0.0, 24.0], [3.0, 6.0, 12.0, 32.0]], np.float32)
+CLIP_INPUTS = True     # False reproduces the live system before this fix (for evaluate_extended.py)
 OCEAN_SHIFT = np.array([0.0, 0.0, 0.0, 28.0], np.float32)
 
 
@@ -136,6 +144,8 @@ class Builder:
         # scaled ocean channels, their 7-day means ending on each day, and HotSpots >= 1.
         v = cube.valid
         xc = cube.x[:, :4][:, :, v].astype(np.float32)                                  # [T, 4, N]
+        if CLIP_INPUTS:
+            xc = np.clip(xc, INPUT_RANGE[0][None, :, None], INPUT_RANGE[1][None, :, None])
         hs = xc[:, 1]
         self.hs_plus = np.nan_to_num(np.where(hs >= 1, hs, 0)).astype(np.float16)     # [T, N]
         ocean = (xc - OCEAN_SHIFT[None, :, None]) / OCEAN_SCALE[None, :, None]
@@ -217,6 +227,8 @@ class Builder:
     def extras(self, t, future_weather=None):
         day = self.c.dates[t]
         dhw_now = np.nan_to_num(self.c.x[t, 2].astype(np.float32))
+        if CLIP_INPUTS:
+            dhw_now = np.minimum(dhw_now, INPUT_RANGE[1, 2])
         ch = [dhw_now[None] / 8.0, self.dropoff(t) / 8.0]
         if self.cfg.weather_future:
             if future_weather is None:
@@ -407,7 +419,8 @@ class PhysNet:
                 opt.step(); sched.step()
                 total += loss.item() * len(fr)
             self._training = False
-            score = score_fn(self, val_idx)
+            # no validation set (cross-validation): train the full schedule and keep the last epoch
+            score = score_fn(self, val_idx) if score_fn else float(epoch)
             self.history.append({"epoch": epoch, "train_loss": total / len(order), "val_score": score})
             print(f"    epoch {epoch:02d}  loss {total / len(order):.4f}  val score {score:.4f}", flush=True)
             if score > best:
@@ -447,7 +460,7 @@ class PhysNet:
     @classmethod
     def load(cls, path, cube, drivers):
         import torch
-        ck = torch.load(path, map_location="cpu")
+        ck = torch.load(path, map_location="cpu", weights_only=True)   # tensors and plain values only, no code
         obj = cls(Config(**ck["cfg"]))
         obj.dev = obj._device()
         obj.builder = Builder(cube, drivers, obj.cfg)

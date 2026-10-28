@@ -164,7 +164,7 @@
       <div class="result-card"><span class="result-num">82.4%</span><span class="result-label">accurate 7 days ahead on unseen 2024–25 seasons</span><span class="result-cmp">vs 68.7% for "no change" · 95% within one level</span></div>
       <div class="result-card"><span class="result-num">76.9%</span><span class="result-label">with the real weather forecasts of the time, in peak season</span><span class="result-cmp">vs 63.8% for "no change" (p &lt; 0.001)</span></div>
       <div class="result-card"><span class="result-num">97% → 77%</span><span class="result-label">accuracy from 1 day to 14 days ahead</span><span class="result-cmp">beats "no change" at every lead time</span></div>
-      <p class="hint results-note">Target: NOAA's official 7-day maximum alert for 1,927 reef cells. Trained on 2018–2021, chosen on 2022–2023, tested once on 2024–2025, with 95% confidence intervals. Full tables: <code>forecast/results/v2_max7/RESULTS.md</code>.</p>
+      <p class="hint results-note">Target: NOAA's official 7-day maximum alert for 1,927 reef cells. Trained on 2018–2021, chosen on 2022–2023, tested once on 2024–2025, with 95% confidence intervals. Full tables: <code>forecast/5_results/v2_max7_final/RESULTS.md</code>.</p>
     </div>
   </section>
 
@@ -193,6 +193,7 @@
           <label class="label" for="layer-select">Layer</label>
           <select id="layer-select"></select>
           <p class="hint" id="layer-desc"></p>
+          <p class="season-note" id="season-note" hidden></p>
         </div>
 
         <div class="glass panel-block">

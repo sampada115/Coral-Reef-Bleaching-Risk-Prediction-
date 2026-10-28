@@ -25,3 +25,10 @@ website/data/cache/
 .env
 forecast/data/
 backend/data/cache/
+
+# Too large for GitHub - kept locally only
+CNN/1_raw_netcdf/
+CNN/2_images/
+CNN/3_dataset.zip
+NLP/nlp_dataset/MMP_Water Quality.zip
+.coverage

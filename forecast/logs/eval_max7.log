@@ -1,0 +1,40 @@
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/dataset.py:102: RuntimeWarning: All-NaN slice encountered
+  out[i] = np.nanmax(self.baa[ids], axis=0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:148: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:175: RuntimeWarning: All-NaN slice encountered
+  out[k - 1] = np.nan_to_num(np.nanmax(self.c.baa[ids], axis=0), nan=-1.0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/evaluate_v2.py:119: RuntimeWarning: All-NaN slice encountered
+  return np.nanmax(np.stack(parts), axis=0)
+  evaluated 24/408 forecast days
+  evaluated 48/408 forecast days
+  evaluated 72/408 forecast days
+  evaluated 96/408 forecast days
+  evaluated 120/408 forecast days
+  evaluated 144/408 forecast days
+  evaluated 168/408 forecast days
+  evaluated 192/408 forecast days
+  evaluated 216/408 forecast days
+  evaluated 240/408 forecast days
+  evaluated 264/408 forecast days
+  evaluated 288/408 forecast days
+  evaluated 312/408 forecast days
+  evaluated 336/408 forecast days
+  evaluated 360/408 forecast days
+  evaluated 384/408 forecast days
+  evaluated 408/408 forecast days
+lead  1: Persistence 0.947  Trend + NOAA rule 0.969  Physics persistenc 0.971  PhysNet + weather  0.919  PhysNet 7-day maxi 0.912  PhysNet + weather  0.923
+lead  2: Persistence 0.897  Trend + NOAA rule 0.940  Physics persistenc 0.941  PhysNet + weather  0.904  PhysNet 7-day maxi 0.903  PhysNet + weather  0.911
+lead  3: Persistence 0.850  Trend + NOAA rule 0.908  Physics persistenc 0.906  PhysNet + weather  0.884  PhysNet 7-day maxi 0.882  PhysNet + weather  0.891
+lead  4: Persistence 0.805  Trend + NOAA rule 0.872  Physics persistenc 0.868  PhysNet + weather  0.864  PhysNet 7-day maxi 0.859  PhysNet + weather  0.870
+lead  5: Persistence 0.763  Trend + NOAA rule 0.828  Physics persistenc 0.823  PhysNet + weather  0.847  PhysNet 7-day maxi 0.838  PhysNet + weather  0.854
+lead  6: Persistence 0.723  Trend + NOAA rule 0.770  Physics persistenc 0.761  PhysNet + weather  0.831  PhysNet 7-day maxi 0.816  PhysNet + weather  0.840
+lead  7: Persistence 0.687  Trend + NOAA rule 0.720  Physics persistenc 0.719  PhysNet + weather  0.815  PhysNet 7-day maxi 0.796  PhysNet + weather  0.824
+lead  8: Persistence 0.652  Trend + NOAA rule 0.684  Physics persistenc 0.683  PhysNet + weather  0.801  PhysNet 7-day maxi 0.778  PhysNet + weather  0.812
+lead  9: Persistence 0.620  Trend + NOAA rule 0.651  Physics persistenc 0.651  PhysNet + weather  0.790  PhysNet 7-day maxi 0.760  PhysNet + weather  0.803
+lead 10: Persistence 0.592  Trend + NOAA rule 0.623  Physics persistenc 0.624  PhysNet + weather  0.782  PhysNet 7-day maxi 0.750  PhysNet + weather  0.794
+lead 11: Persistence 0.567  Trend + NOAA rule 0.598  Physics persistenc 0.600  PhysNet + weather  0.773  PhysNet 7-day maxi 0.740  PhysNet + weather  0.787
+lead 12: Persistence 0.545  Trend + NOAA rule 0.578  Physics persistenc 0.580  PhysNet + weather  0.766  PhysNet 7-day maxi 0.728  PhysNet + weather  0.779
+lead 13: Persistence 0.526  Trend + NOAA rule 0.559  Physics persistenc 0.561  PhysNet + weather  0.757  PhysNet 7-day maxi 0.721  PhysNet + weather  0.774
+lead 14: Persistence 0.508  Trend + NOAA rule 0.541  Physics persistenc 0.542  PhysNet + weather  0.746  PhysNet 7-day maxi 0.710  PhysNet + weather  0.767
+Saved /Users/anushka/Documents/COLLEGE/Capstone/forecast/results/v2_max7

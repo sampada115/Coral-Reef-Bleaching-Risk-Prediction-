@@ -1,0 +1,23 @@
+{'train': 635, 'val': 294, 'test': 408} issue days
+
+== PhysNet (ocean only) (seed 0)
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/physnet.py:130: RuntimeWarning: Mean of empty slice
+  wk[i] = np.nanmean(ocean[ids], 0) if len(ids) > 1 else ocean[ids[0]]
+    epoch 01  loss 1.7386  val score 0.0879
+    epoch 02  loss 1.0443  val score 0.4858
+    epoch 03  loss 0.8110  val score 0.4886
+    epoch 04  loss 0.7205  val score 0.4751
+    epoch 05  loss 0.6959  val score 0.4618
+    epoch 06  loss 0.6772  val score 0.5264
+    epoch 07  loss 0.6514  val score 0.5119
+    epoch 08  loss 0.6415  val score 0.5733
+    epoch 09  loss 0.6248  val score 0.5626
+    epoch 10  loss 0.6038  val score 0.5890
+    epoch 11  loss 0.5991  val score 0.5133
+    epoch 12  loss 0.5886  val score 0.5254
+    epoch 13  loss 0.5639  val score 0.5258
+    epoch 14  loss 0.5526  val score 0.5162
+    epoch 15  loss 0.5370  val score 0.5251
+    epoch 16  loss 0.5419  val score 0.5482
+    epoch 17  loss 0.5176  val score 0.5253
+   best validation score 0.5890 (43 min)

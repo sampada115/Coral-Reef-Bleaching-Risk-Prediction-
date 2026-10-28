@@ -235,6 +235,12 @@ ConvLSTM (an LSTM over whole maps, so every cell gets its own forecast)
   added realistic weather-forecast errors to the training data. It did **not** help, and
   we report that honestly.
 
+**Embeddings for experiments** (`forecast/7_embeddings/`)
+- One 256-number vector per day (2018–2025) from PhysNet, in the same layout as the old
+  `CNN/5_results/Embeddings/cnn_embeddings_daily.csv`, for fusion experiments.
+- Taken before the layers that see future weather, so there's no leakage. Details, labels
+  and a quality check: [forecast/7_embeddings/README.md](../forecast/7_embeddings/README.md).
+
 ### 5.3 Evaluation (`forecast/4_evaluation/`)
 
 | Script | What it measures | Output |
@@ -355,6 +361,11 @@ reasoning. A 3B model writes plainer text than Claude and handles follow-up ques
 
 Run them before pushing changes.
 
+The full test plan goes further: 48 more tests in `testing/` (integration, no-leakage model
+checks, fault injection, security), Bandit and pip-audit scans, a load test and adversarial
+LLM questions. Run it with `./testing/run_all.sh`; results are in
+[testing/TEST_REPORT.md](../testing/TEST_REPORT.md).
+
 ### 5.9 Docs and setup files
 
 | File | Purpose |
@@ -409,6 +420,7 @@ Capstone/
 │   ├── 4_evaluation/         evaluate_v2.py, eval_real_forecasts.py, hybrid.py
 │   ├── 5_results/            v2_max7_final/ (HEADLINE), v2_daily_target/, v1_first_corrected_model/, data_checks/
 │   ├── 6_saved_models/       v2/ (live models + meta.json), v1/
+│   ├── 7_embeddings/         daily PhysNet embeddings for fusion experiments
 │   ├── data/                 cube.npz, weather.npz, caches (git-ignored, large)
 │   ├── logs/                 every training/evaluation log
 │   └── v1_first_model/       first corrected model code
@@ -418,7 +430,9 @@ Capstone/
 │   ├── ai/                   corpus, search, LLM, fact-checking, grounding eval
 │   └── data/                 corpus.json, grounding_eval.json, cache/
 ├── website/           landing page + live map + AI panel
-├── tests/             16 offline tests
+├── tests/             16 offline unit tests
+├── testing/           full test suite (integration, validation, robustness, security,
+│                      performance, LLM), test report, slide content and charts
 ├── docs/              this guide and the other docs
 ├── run.sh  requirements.txt  .env.example
 └── README.md

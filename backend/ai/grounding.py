@@ -64,7 +64,7 @@ def facts_to_text(facts):
         s = f.get("skill") or {}
         mt, pt = s.get("model_test_7d") or s.get("model_test"), s.get("persistence_test_7d") or s.get("persistence_test")
         if mt and pt:
-            lines.append(f"On unseen test seasons ({s.get('test_seasons', '2024-2025')}), the model's 7-day accuracy was {mt['accuracy'] * 100:.1f}% versus {pt['accuracy'] * 100:.1f}% for assuming no change.")
+            lines.append(f"On unseen test seasons ({s.get('test_seasons', '2024-2025')}), given the weather that actually happened (a perfect weather forecast), the model's 7-day accuracy was {mt['accuracy'] * 100:.1f}% versus {pt['accuracy'] * 100:.1f}% for assuming no change.")
         real = s.get("with_real_weather_forecasts_7d")
         if real:
             lines.append(f"Using the real weather forecasts of the time ({real['period']}), the 7-day accuracy was {real['model_accuracy'] * 100:.1f}% versus {real['persistence_accuracy'] * 100:.1f}% for assuming no change.")

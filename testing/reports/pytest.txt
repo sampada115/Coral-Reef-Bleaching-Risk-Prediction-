@@ -1,0 +1,30 @@
+................................................................         [100%]
+================================ tests coverage ================================
+_______________ coverage: platform darwin, python 3.14.4-final-0 _______________
+
+Name                                  Stmts   Miss  Cover
+---------------------------------------------------------
+backend/__init__.py                       0      0   100%
+backend/ai/__init__.py                    0      0   100%
+backend/ai/build_corpus.py              112    112     0%
+backend/ai/eval_grounding.py             40     40     0%
+backend/ai/grounding.py                 268     28    90%
+backend/ai/llm.py                       180     49    73%
+backend/ai/rag.py                        76      4    95%
+backend/app.py                          208     49    76%
+backend/forecasting/__init__.py           0      0   100%
+backend/forecasting/forecast_now.py      35     35     0%
+backend/forecasting/forecast_v1.py       95     68    28%
+backend/forecasting/forecast_v2.py      157     13    92%
+coralwatch/__init__.py                    0      0   100%
+coralwatch/geo.py                        63      1    98%
+coralwatch/noaa.py                      159    108    32%
+coralwatch/stats.py                      27      0   100%
+coralwatch/weather.py                   120     53    56%
+forecast/2_model/dataset.py              75     35    53%
+forecast/2_model/paths.py                23      0   100%
+forecast/2_model/physnet.py             348     97    72%
+---------------------------------------------------------
+TOTAL                                  1986    692    65%
+Coverage HTML written to dir testing/reports/coverage_html
+64 passed in 38.00s

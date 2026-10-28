@@ -1,0 +1,10 @@
+Checking recovered values against real NOAA data ...
+  2024-03-03: mean abs error {'ssta': 0.0058, 'hotspot': 0.0103, 'dhw': 0.0176, 'baa_agreement': 0.9877, 'sst': 0.0088}
+  2022-03-12: mean abs error {'ssta': 0.0059, 'hotspot': 0.0101, 'dhw': 0.0195, 'baa_agreement': 0.9942, 'sst': 0.008}
+  2020-03-08: mean abs error {'ssta': 0.0058, 'hotspot': 0.011, 'dhw': 0.0172, 'baa_agreement': 0.9904, 'sst': 0.008}
+  2025-03-09: mean abs error {'ssta': 0.0058, 'hotspot': 0.011, 'dhw': 0.0187, 'baa_agreement': 0.9882, 'sst': 0.0094}
+Building the dataset ...
+/Users/anushka/Documents/COLLEGE/Capstone/forecast/recover_from_images.py:87: RuntimeWarning: All-NaN slice encountered
+  clim = np.nanmedian(clim_diff[near], axis=0)
+  rebuilt SST anomaly for 240 days from SST and climatology
+Saved /Users/anushka/Documents/COLLEGE/Capstone/forecast/data/cube.npz: 2891 days (2018-01-01 .. 2025-12-31), 31 days skipped for a missing channel, 1927 park cells

@@ -1,0 +1,5 @@
+                arr = np.nan_to_num(arr, nan=0.0)
+                norm = mcolors.Normalize(vmin=24, vmax=32)
+                rgba = cm.viridis(norm(arr))
+                rgb  = (rgba[:, :, :3] * 255).astype(np.uint8)
+                Image.fromarray(rgb).save(out)
